@@ -64,6 +64,12 @@ public class Cliente {
 	public void setCpf(double cpf) {
 		this.cpf = cpf;
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [nome=" + nome + ", endereco=" + endereco + ", email=" + email + ", telefone=" + telefone
+				+ ", rg=" + rg + ", cpf=" + cpf + "]";
+	}
 	
 	
 		
