@@ -112,20 +112,14 @@ public class Atendimento {
 		double pagamentoVet = getPreco() * 0.2;
 		return pagamentoVet;
 	}
-	
-	
-//	public void calcularPorcentagen () {
-//		double porcentagem = 100-(((preco)*100)/this.preco);
-		
-// }
-	
-	
-	
-	
-//	public double colocarPrecoDesconto() {
-//		if (precoComDesconto < valorMinimo) {
-//			return precoComDesconto; 		
-//		}
+
+	@Override
+	public String toString() {
+		return "Atendimento [tutor=" + tutor + ", paciente=" + paciente + ", veterinario=" + veterinario
+				+ ", procedimento=" + procedimento + ", preco=" + preco + ", formaPagamento=" + formaPagamento
+				+ ", desconto=" + desconto + ", valorMinimo=" + valorMinimo + ", DESCONTOMAXIMO=" + DESCONTOMAXIMO
+				+ "]";
+	}
 	
 	
 }
