@@ -1,10 +1,10 @@
 package br.com.pet.model;
 
 public class Vet {
-	public String nome;
-	public int registro;
-	public double telefone;
-	public String email;
+	private String nome;
+	private int registro;
+	private double telefone;
+	private String email;
 	
 	public Vet(String nome, int registro, double telefone, String email) {
 		this.nome = nome;
@@ -14,10 +14,39 @@ public class Vet {
 		
 	}
 	
-	public static double cacularPagamentoVet(Atendimento atendimento) {
-		double pagamentoVet = atendimento.getPreco() * 0.2;
-		return pagamentoVet;
+	public String getNome() {
+		return nome;
 	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getRegistro() {
+		return registro;
+	}
+
+	public void setRegistro(int registro) {
+		this.registro = registro;
+	}
+
+	public double getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(double telefone) {
+		this.telefone = telefone;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	
 
 	@Override
 	public String toString() {

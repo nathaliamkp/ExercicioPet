@@ -5,10 +5,10 @@ public class Cliente {
 	private String endereco;
 	private String email;
 	private int telefone;
-	private double rg;
-	private double cpf;
+	private int rg;
+	private int cpf;
 	
-	public Cliente(String nome, String endereco, String email, int telefone, double rg, double cpf) {
+	public Cliente(String nome, String endereco, String email, int telefone, int rg, int cpf) {
 		this.nome = nome;
 		this.endereco = endereco;
 		this.email = email;
@@ -53,7 +53,7 @@ public class Cliente {
 		return rg;
 	}
 
-	public void setRg(double rg) {
+	public void setRg(int rg) {
 		this.rg = rg;
 	}
 
@@ -61,7 +61,7 @@ public class Cliente {
 		return cpf;
 	}
 
-	public void setCpf(double cpf) {
+	public void setCpf(int cpf) {
 		this.cpf = cpf;
 	}
 

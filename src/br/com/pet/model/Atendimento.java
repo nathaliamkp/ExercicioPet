@@ -11,14 +11,14 @@ public class Atendimento {
 	private double valorMinimo;
 	private double DESCONTOMAXIMO = 50;
 	
-	public Atendimento(Cliente tutor, Pet paciente, Vet veterinario, String procedimento, double preco, String formaPagamento, boolean desconto) {
+	public Atendimento(Cliente tutor, Pet paciente, Vet veterinario, String procedimento, double preco, String formaPagamento) {
 		this.tutor = tutor;
 		this.paciente = paciente;
 		this.veterinario = veterinario;
 		this.procedimento = procedimento;
 		this.preco = preco;
 		this.formaPagamento = formaPagamento;
-		this.desconto = desconto;
+		
 	}
 	
 	public double calcularValorMinimo() {
@@ -110,6 +110,11 @@ public class Atendimento {
 
 	public double calcularPagamentoVet() {
 		double pagamentoVet = getPreco() * 0.2;
+		return pagamentoVet;
+	}
+	
+	public static double cacularPagamentoVet(Atendimento atendimento) {
+		double pagamentoVet = atendimento.getPreco() * 0.2;
 		return pagamentoVet;
 	}
 
