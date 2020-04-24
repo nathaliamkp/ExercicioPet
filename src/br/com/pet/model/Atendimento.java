@@ -85,19 +85,23 @@ public class Atendimento {
 
 	public double colocarDesconto(double desconto) {
 		    if (this.desconto == true && desconto <= DESCONTOMAXIMO) {
-		    	desconto =  desconto/100;
-		    	return preco = preco -(preco*desconto);
+		    	double porcentagem =  desconto/100;
+		    	return preco = preco -(preco*porcentagem);
 		    } else {
 		    	return preco;
 		    }    			
 	}
 	
 	
-	public double colocaPrecoComDesconto (double precoComDesconto) {
+	public boolean colocaPrecoComDesconto (double precoComDesconto) {
+		calcularValorMinimo();
 		if (precoComDesconto >= valorMinimo && precoComDesconto < preco) {
+			preco = precoComDesconto;
+			return true;
 		}
-				return preco = precoComDesconto;
-			
+		
+		return false;
+
 	}
 
 	public Cliente getTutor() {
