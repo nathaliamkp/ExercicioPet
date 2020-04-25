@@ -3,8 +3,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import br.com.pet.model.Atendimento;
-import br.com.pet.model.Vet;
+import br.com.pet.bean.Atendimento;
+import br.com.pet.bean.Vet;
 
 class VetTest {
 

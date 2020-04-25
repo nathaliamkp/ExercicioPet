@@ -1,4 +1,4 @@
-package br.com.pet.model;
+package br.com.pet.bean;
 
 public class Atendimento {
 	private Cliente tutor;
@@ -10,23 +10,23 @@ public class Atendimento {
 	private boolean desconto;
 	private double valorMinimo;
 	private double DESCONTOMAXIMO = 50;
-	
-	public Atendimento(Cliente tutor, Pet paciente, Vet veterinario, String procedimento, double preco, String formaPagamento) {
+
+	public Atendimento(Cliente tutor, Pet paciente, Vet veterinario, String procedimento, double preco,
+			String formaPagamento) {
 		this.tutor = tutor;
 		this.paciente = paciente;
 		this.veterinario = veterinario;
 		this.procedimento = procedimento;
 		this.preco = preco;
 		this.formaPagamento = formaPagamento;
-		
+
 	}
-	
+
 	public double calcularValorMinimo() {
-		valorMinimo = preco-(preco*(DESCONTOMAXIMO/100));
+		valorMinimo = preco - (preco * (DESCONTOMAXIMO / 100));
 		return valorMinimo;
 	}
-		
-	
+
 	public Pet getPaciente() {
 		return paciente;
 	}
@@ -83,27 +83,6 @@ public class Atendimento {
 		return DESCONTOMAXIMO;
 	}
 
-	public double colocarDesconto(double desconto) {
-		    if (this.desconto == true && desconto <= DESCONTOMAXIMO) {
-		    	double porcentagem =  desconto/100;
-		    	return preco = preco -(preco*porcentagem);
-		    } else {
-		    	return preco;
-		    }    			
-	}
-	
-	
-	public boolean colocaPrecoComDesconto (double precoComDesconto) {
-		calcularValorMinimo();
-		if (precoComDesconto >= valorMinimo && precoComDesconto < preco) {
-			preco = precoComDesconto;
-			return true;
-		}
-		
-		return false;
-
-	}
-
 	public Cliente getTutor() {
 		return tutor;
 	}
@@ -116,10 +95,30 @@ public class Atendimento {
 		double pagamentoVet = getPreco() * 0.2;
 		return pagamentoVet;
 	}
-	
+
 	public static double cacularPagamentoVet(Atendimento atendimento) {
 		double pagamentoVet = atendimento.getPreco() * 0.2;
 		return pagamentoVet;
+	}
+
+	public double colocarDesconto(double desconto) {
+		if (this.desconto == true && desconto <= DESCONTOMAXIMO) {
+			double porcentagem = desconto / 100;
+			return preco = preco - (preco * porcentagem);
+		} else {
+			return preco;
+		}
+	}
+
+	public boolean colocaPrecoComDesconto(double precoComDesconto) {
+		calcularValorMinimo();
+		if (precoComDesconto >= valorMinimo && precoComDesconto < preco) {
+			preco = precoComDesconto;
+			return true;
+		}
+
+		return false;
+
 	}
 
 	@Override
@@ -129,16 +128,5 @@ public class Atendimento {
 				+ ", desconto=" + desconto + ", valorMinimo=" + valorMinimo + ", DESCONTOMAXIMO=" + DESCONTOMAXIMO
 				+ "]";
 	}
-	
-	
+
 }
-	
-	
-
-
-	
-	
-	
-	
-
-
