@@ -11,36 +11,37 @@ public class AtendimentoServico {
 
 	public static void main(String[] args) {
 
-		int opcaoMenuPrincial = 999;
+		
+		int opcaoMenuPrincipal = 999;
 
-		while (opcaoMenuPrincial != 0) {
+		while (opcaoMenuPrincipal != 0) {
 			System.out.println("Bem vindo a Clínica Veterinária Pet");
 			System.out.println("Veja abaixo as suas opçoes");
 			System.out.println("1 - Para iniciar atendimento");
 			System.out.println("0 - Para sair");
 
 			Scanner leitor = new Scanner(System.in);
-			opcaoMenuPrincial = leitor.nextInt();
+			opcaoMenuPrincipal = leitor.nextInt();
 
-			if (opcaoMenuPrincial == 1) {
+			if (opcaoMenuPrincipal == 1) {
 
 				ClienteServico clienteServico = new ClienteServico();
 
-   			Cliente tutor = new Cliente("Zorandir", "R. Pensilvânia", "zorandir@gmail.com", 552, 296096179,
-						8191831);
-//				Cliente tutor = clienteServico.criaCliente();
+//   			Cliente tutor = new Cliente("Zorandir", "R. Pensilvânia", "zorandir@gmail.com", 552, 296096179,
+//						8191831);
+				Cliente tutor = clienteServico.criaCliente();
 				clienteServico.imprimeCliente(tutor);
 
 				PetServico petServico = new PetServico();
 
-				Pet paciente = new Pet("Mel", "SRD", "Cachorro", 10, 15, "feminino", tutor);
-//				Pet paciente =  petServico.criaPaciente(tutor);
+//				Pet paciente = new Pet("Mel", "SRD", "Cachorro", 10, 15, "feminino", tutor);
+				Pet paciente =  petServico.criaPaciente(tutor);
 				petServico.imprimePaciente(paciente);
 
 				VetServico vetServico = new VetServico();
 
-				Vet veterinario = new Vet("Ana", 1234, 333255658, "ana@pet.com");
-//				Vet veterinario = vetServico.criaVeterinario();
+//				Vet veterinario = new Vet("Ana", 1234, 333255658, "ana@pet.com");
+				Vet veterinario = vetServico.criaVeterinario();
 				vetServico.imprimeVeterinario(veterinario);
 
 				System.out.println("Digite o procedimento:");
@@ -73,9 +74,11 @@ public class AtendimentoServico {
 				
 				System.out.println("Atendimento finalizado");
 				
+				opcaoMenuPrincipal = 0;
+				leitor.close();	
 				
 			}
-			leitor.close();
+			
 			
 		}
 	}
