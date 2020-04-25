@@ -2,7 +2,7 @@ package br.com.pet.view;
 
 import java.util.Scanner;
 
-import br.com.pet.model.Vet;
+import br.com.pet.bean.Vet;
 
 public class VetServico {
 	
@@ -25,7 +25,7 @@ public class VetServico {
 	public void imprimeVeterinario(Vet veterinario) {
 		
 		System.out.println(" ========== ========== \n" + 
-				"   Valor     Atributo  \n" + 
+				"   Vet       Atributo  \n" + 
 				" ========== ========== \n" + 
 				"  Nome      "+ veterinario.getNome() +"            \n" + 
 				"  CRMV      "+ veterinario.getRegistro()+"            \n" + 

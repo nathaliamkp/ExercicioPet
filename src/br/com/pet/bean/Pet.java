@@ -1,4 +1,4 @@
-package br.com.pet.model;
+package br.com.pet.bean;
 
 public class Pet {
 	private String nome;
@@ -8,7 +8,18 @@ public class Pet {
 	private int peso;
 	private String sexo;
 	private Cliente tutor;
-	
+
+	public Pet(String nome, String raca, String especie, int idade, int peso, String sexo, Cliente tutor) {
+		this.nome = nome;
+		this.raca = raca;
+		this.especie = especie;
+		this.idade = idade;
+		this.peso = peso;
+		this.sexo = sexo;
+		this.tutor = tutor;
+
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -57,18 +68,6 @@ public class Pet {
 		this.tutor = tutor;
 	}
 
-	public Pet(String nome, String raca, String especie, int idade, int peso, String sexo, Cliente tutor) {
-		this.nome = nome;
-		this.raca = raca;
-		this.especie = especie;
-		this.idade = idade;
-		this.peso = peso;
-		this.sexo = sexo;
-		this.tutor = tutor;
-		
-		
-	}
-
 	public int getPeso() {
 		return peso;
 	}
@@ -82,7 +81,5 @@ public class Pet {
 		return "Pet [nome=" + nome + ", raca=" + raca + ", especie=" + especie + ", idade=" + idade + ", peso=" + peso
 				+ ", sexo=" + sexo + ", tutor=" + tutor + "]";
 	}
-	
-	
 
 }

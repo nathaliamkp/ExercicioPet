@@ -2,8 +2,8 @@ package br.com.pet.view;
 
 import java.util.Scanner;
 
-import br.com.pet.model.Cliente;
-import br.com.pet.model.Pet;
+import br.com.pet.bean.Cliente;
+import br.com.pet.bean.Pet;
 
 public class PetServico {
 	
@@ -32,7 +32,7 @@ public class PetServico {
 		
 		Cliente tutor = paciente.getTutor();
 		System.out.println(" ========== ========== \n" + 
-				"   Valor     Atributo  \n" + 
+				"  Paciente    Atributo  \n" + 
 				" ========== ========== \n" + 
 				"  Nome      "+ paciente.getNome() +"            \n" + 
 				"  Raca      "+ paciente.getRaca()+"            \n" + 
