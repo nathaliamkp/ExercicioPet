@@ -1,11 +1,11 @@
 package br.com.pet.view;
 
-import br.com.pet.model.Atendimento;
-import br.com.pet.model.Cliente;
-import br.com.pet.model.Pet;
-import br.com.pet.model.Vet;
-
 import java.util.Scanner;
+
+import br.com.pet.bean.Atendimento;
+import br.com.pet.bean.Cliente;
+import br.com.pet.bean.Pet;
+import br.com.pet.bean.Vet;
 
 public class AtendimentoServico {
 
@@ -26,8 +26,8 @@ public class AtendimentoServico {
 
 				ClienteServico clienteServico = new ClienteServico();
 
-				Cliente tutor = new Cliente("Zorandir", "R. Pensilvânia", "zorandir@gmail.com", 552, 296096179, 8191831);
-//				Cliente tutor = clienteServico.criaCliente();
+//				Cliente tutor = new Cliente("Zorandir", "R. Pensilvânia", "zorandir@gmail.com", 552, 296096179, 8191831);
+				Cliente tutor = clienteServico.criaCliente();
 				clienteServico.imprimeCliente(tutor);
 
 				PetServico petServico = new PetServico();

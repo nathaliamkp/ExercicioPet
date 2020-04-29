@@ -2,7 +2,7 @@ package br.com.pet.view;
 
 import java.util.Scanner;
 
-import br.com.pet.model.Vet;
+import br.com.pet.bean.Vet;
 
 public class VetServico {
 	

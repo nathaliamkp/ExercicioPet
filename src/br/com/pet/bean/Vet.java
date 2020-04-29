@@ -1,4 +1,4 @@
-package br.com.pet.model;
+package br.com.pet.bean;
 
 public class Vet {
 	private String nome;

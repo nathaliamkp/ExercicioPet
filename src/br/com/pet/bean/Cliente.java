@@ -1,4 +1,4 @@
-package br.com.pet.model;
+package br.com.pet.bean;
 
 public class Cliente {
 	private String nome;
