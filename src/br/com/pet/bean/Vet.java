@@ -5,15 +5,15 @@ public class Vet {
 	private int registro;
 	private double telefone;
 	private String email;
-	
+
 	public Vet(String nome, int registro, double telefone, String email) {
 		this.nome = nome;
 		this.registro = registro;
 		this.telefone = telefone;
 		this.email = email;
-		
+
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -46,16 +46,9 @@ public class Vet {
 		this.email = email;
 	}
 
-	
-
 	@Override
 	public String toString() {
 		return "Vet [nome=" + nome + ", registro=" + registro + ", telefone=" + telefone + ", email=" + email + "]";
 	}
-	
-	
-	
-	
-
 
 }

@@ -25,7 +25,7 @@ public class VetServico {
 	public void imprimeVeterinario(Vet veterinario) {
 		
 		System.out.println(" ========== ========== \n" + 
-				"   Valor     Atributo  \n" + 
+				"   Vet       Atributo  \n" + 
 				" ========== ========== \n" + 
 				"  Nome      "+ veterinario.getNome() +"            \n" + 
 				"  CRMV      "+ veterinario.getRegistro()+"            \n" + 

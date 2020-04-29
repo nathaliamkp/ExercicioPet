@@ -32,7 +32,7 @@ public class PetServico {
 		
 		Cliente tutor = paciente.getTutor();
 		System.out.println(" ========== ========== \n" + 
-				"   Valor     Atributo  \n" + 
+				"  Paciente    Atributo  \n" + 
 				" ========== ========== \n" + 
 				"  Nome      "+ paciente.getNome() +"            \n" + 
 				"  Raca      "+ paciente.getRaca()+"            \n" + 

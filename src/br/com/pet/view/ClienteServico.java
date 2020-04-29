@@ -32,7 +32,7 @@ public class ClienteServico {
 	public void imprimeCliente(Cliente tutor) {
 
 		System.out.println(" ========== ========== \n" + 
-				"   Valor     Atributo  \n" + 
+				"   Cliente    Atributo  \n" + 
 				" ========== ========== \n" + 
 				"  Nome      "+ tutor.getNome() +"            \n" + 
 				"  Endereço  "+ tutor.getEndereco()+"            \n" + 

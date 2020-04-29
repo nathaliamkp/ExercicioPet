@@ -7,7 +7,7 @@ public class Cliente {
 	private int telefone;
 	private int rg;
 	private int cpf;
-	
+
 	public Cliente(String nome, String endereco, String email, int telefone, int rg, int cpf) {
 		this.nome = nome;
 		this.endereco = endereco;
@@ -70,8 +70,5 @@ public class Cliente {
 		return "Cliente [nome=" + nome + ", endereco=" + endereco + ", email=" + email + ", telefone=" + telefone
 				+ ", rg=" + rg + ", cpf=" + cpf + "]";
 	}
-	
-	
-		
 
 }
